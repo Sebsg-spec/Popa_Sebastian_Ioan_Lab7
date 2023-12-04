@@ -17,18 +17,24 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            
-            <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked"/>
-
-            <ListView x:Name="listView" Margin="20">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Detail="{Binding Description}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked"/>
+            <Button Text="Save" 
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" 
+                    Text="Delete" 
+                    Clicked="OnDeleteButtonClicked"/>
         </Grid>
-        <Button Text="Save" Clicked="OnSaveButtonClicked" />
+
+        <ListView  x:Name="listView"  
+              Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell  Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300" 
+Clicked="OnChooseButtonClicked"/>
     </StackLayout>
+
 </ContentPage>
